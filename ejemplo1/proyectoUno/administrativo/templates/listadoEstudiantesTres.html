@@ -2,7 +2,6 @@
 Número de estudiantes {{ numero_estudiantes }}
 <hr>
 <br />
-
 <ul>
 
     {% for e in estudiantes %}
@@ -12,5 +11,18 @@ Número de estudiantes {{ numero_estudiantes }}
     {% endfor %}
 
 </ul>
-
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Numerillos</th>
+    </tr>
+    {% for e in estudiantes %}
+    <tr>
+        <td>{{ e.id }}</td>
+        <td>{{ e.nombre }}</td>
+        <td>{{ e.obtener_numeros_telefonicos}}</td>
+    </tr>
+    {% endfor %}
+</table>
 <hr>
